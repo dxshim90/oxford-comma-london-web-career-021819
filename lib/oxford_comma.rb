@@ -4,6 +4,9 @@ if array.length == 1
   elsif array.length == 2 
   array.join(" and ")
   elsif array.length == 3 
-  
-end
+  new_last_array_item = "and #{array[-1]}"
+    array.pop
+    array.push(new_last_array_item)
+    return array.join(", ")
+  end
 end
